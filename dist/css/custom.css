@@ -1,0 +1,25 @@
+:root {
+  --blue: #1F8597;
+  --silverGray: #EFF0F2;
+  --white: #ffffff;
+  --darkGray: #333333;
+  --darkGreen: #317773;
+  --lightGreen: #C6E0BB;
+  --lightPink: #FEFEFE;
+  --darkerBlack: #525A65;
+  --lightOrange: #EF8336;
+  --lightRed: #F4516C;
+}
+
+
+.commande-header {
+  font-size: 1.8rem !important;
+  font-weight: 400;
+  color: var( --white);
+  background-color: var( --blue);
+  padding: 1rem 0;
+}
+
+.form-title {
+  font-size: 1.5rem;
+}
