@@ -10,6 +10,10 @@
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
   <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> 
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
   <!-- iCheck -->
@@ -145,7 +149,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-10 mx-auto">
+          <div class="col-md-11 mx-auto whitebgbox">
             <!-- form -->
             <div class="form-wrapper">
               <form>
@@ -187,21 +191,21 @@
                     </div>
                   </div>
                   <span class="form-title">Période</span>
-                  <div class="row">
+                  <div class="row">              
                     <div class="form-group d-flex align-items-center p-2">
                       <label class="m-0">Date Début :</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
-                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                        <div class="input-group date" id="datedebut" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datedebut">
+                            <div class="input-group-append" data-target="#datedebut" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
                         </div>
                     </div>
                     <div class="form-group d-flex align-items-center p-2">
                       <label class="m-0 p-2">Date fin :</label>
-                        <div class="input-group date" id="reservationdate" data-target-input="nearest">
-                            <input type="text" class="form-control datetimepicker-input" data-target="#reservationdate">
-                            <div class="input-group-append" data-target="#reservationdate" data-toggle="datetimepicker">
+                        <div class="input-group date" id="datefin" data-target-input="nearest">
+                            <input type="text" class="form-control datetimepicker-input" data-target="#datefin">
+                            <div class="input-group-append" data-target="#datefin" data-toggle="datetimepicker">
                                 <div class="input-group-text"><i class="fa fa-calendar"></i></div>
                             </div>
                         </div>
@@ -214,22 +218,306 @@
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group d-flex align-items-center p-2">
-                      <label>Code Postal</label>
+                      <label class="pr-2">Code Postal</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group d-flex align-items-center p-2">
-                      <label>Nom</label>
+                      <label class="pr-2">Nom</label>
                       <input type="text" class="form-control">
                     </div>
                     <div class="form-group d-flex align-items-center p-2">
-                      <label>Prénom</label>
+                      <label class="pr-2">Prénom</label>
                       <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group d-flex align-items-center p-2">
+                      <a class="btn btn-search"><i class="fas fa-search search"></i></a>
+                    </div>
+                    <div class="form-group d-flex align-items-center p-2 myExcel">
+                      <a class="btn btn-excel">Excel</a>
                     </div>
                   </div>
-                  
                 </div><!-- End form-container -->
               </form>
+              <!-- Subbtns -->
+              <div class=" sub-btns">
+                <div class="btn btn-popup" data-toggle="modal" data-target="#exampleModalCenter">Ventes associées/Ventes promo</div>
+                <div class="btn btn-popup">Ventes associées/Ventes promo</div>
+                <div class="btn btn-popup">Questionnaires</div>
+                <div class="btn btn-popup">Stat.Chronopost</div>
+                <div class="btn btn-popup">Problème Article</div>
+                <div class="btn btn-popup">Parametrage Ventes Promo</div>
+                <!--Modals for sub-btns-->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">REDER Vente Associés/Vente Promo</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          <h2 class="modal-title">Vente associée</h2>
+                          <form>
+                            <div class=" row vente-wrapper d-flex">
+                              <div class="form-group d-flex align-items-center p-2">
+                                <label class="m-0 mr-1">Type</label>
+                                <select class="form-control">
+                                  <option>Option 1</option>
+                                  <option>Option 2</option>
+                                </select>
+                              </div>
+                              <div class="form-group d-flex align-items-center p-2">
+                                <label class="m-0">Date Début :</label>
+                                  <div class="input-group date" id="datedebut">
+                                      <input type="date" class="form-control datetimepicker-input">
+                                  </div>
+                              </div>
+                              <div class="form-group d-flex align-items-center p-2">
+                                <label class="m-0">Date Fin :</label>
+                                  <div class="input-group date" id="datedebut">
+                                      <input type="date" class="form-control datetimepicker-input">
+                                  </div>
+                              </div>
+                              <div class="form-group d-flex align-items-center p-2">
+                                <label class="m-0 mr-1">Agent</label>
+                                <select class="form-control">
+                                  <option>Tous</option>
+                                  <option>Option 2</option>
+                                </select>
+                              </div>
+                              <div class="form-group d-flex align-items-center p-2 recherche">
+                                <button type="button" class="btn btn-searchlink">Recherche <i class="fas fa-search search"></i></button>
+                              </div>
+                            </div>
+                          </form>
+                          <!--NbrVente-->
+                          <div class="minimontal-container">
+                            <div class="minimontant">
+                                <span class="minitotalM mr-1">Total Vent Assoc.</span>
+                                <span class="mininumberfond"> 4</span>
+                            </div>
+                          </div>
+                          <!--Table-->
+                          <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                            <table class="table table-bordered table-striped mb-0">
+                              <thead class="tbaground"> 
+                                <tr>
+                                  <th scope="col">AGENT</th>
+                                  <th scope="col">CDE ID</th>
+                                  <th scope="col">PRODUIT MAITRE</th>
+                                  <th scope="col">LIBELLE MAITRE</th> 
+                                  <th scope="col">TAILE P.MAITRE</th>
+                                  <th scope="col">PRODUIT ASSOCIE</th>
+                                  <th scope="col">LIBELLE ASSOCIE</th>
+                                  <th scope="col">TAILLE P.ASSOCIE</th>
+                                  <th scope="col">PRIX UNITAIRE(€)</th>
+                                  <th scope="col">QTE</th>
+                                  <th scope="col">DATE & HEURE</th>
+                                </tr>
+                              </thead>
+                              <tbody>
+                                <tr>
+                                  <td>dereck</td>  
+                                  <td>358635</td>
+                                  <td>6012250</td>
+                                  <td>GILET BTE MERINOS BEIGEL</td>
+                                  <td>L</td>
+                                  <td>0284164</td>
+                                  <td>SLIPS MODELINE X3 XL  </td>
+                                  <td>XL</td>
+                                  <td>5.70 € </td>
+                                  <td>1</td>
+                                  <td>12/09/2020 1:33 PM</td>
+                                </tr>
+
+                                <tr>
+                                  <td>chole</td>  
+                                  <td>358677</td>
+                                  <td>0287018</td>
+                                  <td>ORGUE ELECTRONIQUE</td>
+                                  <td> </td>
+                                  <td>0238099</td>
+                                  <td>PILES R6 X4</td>
+                                  <td>XL</td>
+                                  <td>4.70 € </td>
+                                  <td>1</td>
+                                  <td>12/09/2020 2:25 PM</td>
+                                </tr>
+                                
+                              </tbody>
+                            </table>
+                          </div> <!--fin Table-->
+                          <div class="mt-2">
+                            <button type="button" class="btn btn-general">Export en Excel</button>
+                          </div>  
+                        </div>
+                        
+                      </div>
+                    </div>
+                  </div>
+                <!---->
+              </div><!-- End Subbtns -->
             </div> <!-- End form -->
+            <!--Table-->
+            <div class="row mt-5">
+              <div class="col-12">
+                <!-- <div class="card"> -->
+                  <div class="card-body p-0 m-0">
+                      <table id="example2"  class="table table-bordered table-striped table-hover">
+                        <thead>
+                          <tr role="row" class="tablhd">
+                            <th>Commande</th>
+                            <th>Nom</th>
+                            <th>Date</th>
+                            <th>Type</th>
+                            <th>Marque</th>
+                            <th>Montant(€)</th>
+                            <th>Status</th>
+                            <th>Utilisateur</th>
+                            <th>Heure (HDM)</th>
+                            <th>Numéro Client</th>
+                            <th>Code Postal</th>
+                            <th>Paiement Par</th>
+                            <th>Paie3Fois</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                          <tr role="row" class="odd">
+                            <td tabindex="0" class="sorting_1">358502</td>
+                            <td>BOURGONNIER FABIENNE</td>
+                            <td>2020-11-03</td>
+                            <td>Commande</td>
+                            <td>Femme Moderne</td>
+                            <td>89.90</td>
+                            <td>SAISIE</td>
+                            <td>Anne-laure</td>
+                            <td>11:04:01 </td>
+                            <td>0669661491</td>
+                            <td>54700</td>
+                            <td>CBA</td>
+                            <td>N</td>
+                          </tr>
+                        </tbody>
+                      </table> 
+                  </div>
+              </div>
+              <!-- /.col -->
+            </div> <!-- End Table-->
+
+            <!--Montant Total-->
+            <div class="montal-container">
+              <div class="montant">
+                  <span>371 ligne(s)</span>
+                  <span class="totalM p-1">Total Montant</span>
+                  <span class="numberfond"> 40877.8 €</span>
+              </div>
+            </div>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -280,11 +568,34 @@
 <script src="plugins/summernote/summernote-bs4.min.js"></script>
 <!-- overlayScrollbars -->
 <script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
 </body>
 </html>

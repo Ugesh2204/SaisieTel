@@ -2,7 +2,7 @@
   --blue: #1F8597;
   --silverGray: #EFF0F2;
   --white: #ffffff;
-  --darkGray: #333333;
+  --darkGray: #525A65;
   --darkGreen: #317773;
   --lightGreen: #C6E0BB;
   --lightPink: #FEFEFE;
@@ -11,6 +11,10 @@
   --lightRed: #F4516C;
 }
 
+.whitebgbox {
+  background-color: var( --white);
+  padding: 2rem 2rem;
+}
 
 .commande-header {
   font-size: 1.8rem !important;
@@ -19,7 +23,183 @@
   background-color: var( --blue);
   padding: 1rem 0;
 }
-
 .form-title {
   font-size: 1.5rem;
+  color:var(--darkGreen);
+  font-weight:400;
+}
+.btn-search {
+  background-color:var(--darkGray);
+}
+.btn-search:hover {
+  background-color:var(--darkGreen);
+} 
+
+.recherche a {
+  color:#ffffff;
+}
+
+.recherche a:hover {
+  color:#ffffff;
+}
+.btn-searchlink {
+  background-color:var(--darkGray);
+  color: #ffffff;
+}
+
+.btn-searchlink:hover {
+  background-color:var(--darkGreen);
+  color:#ffffff;
+}
+
+
+.search {
+  color:var(--lightOrange);
+}
+.btn-excel {
+  background-color: var(--darkGreen);
+} 
+.btn-excel:hover {
+  color:#fff;
+  background-color: var(--darkGray);
+}
+
+.myExcel a {
+  color:#ffffff;
+}
+.myExcel a:hover {
+  color:#ffffff;
+}
+
+.sub-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-popup{
+  background-color: var(--darkGreen);
+  color:#ffffff;
+  padding: 0.5rem 2rem;
+}
+.btn-popup:hover{
+  color:#fff;
+  background-color: var(--darkGray);
+}
+
+.tablhd {
+  background-color: var(--darkGray);
+  color:#ffffff
+}
+
+.page-item.active .page-link {
+    background-color:var(--blue) !important;
+    border-color: var(--blue) !important;
+}
+
+
+.montal-container {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.montant {
+  display:flex;
+  align-items: center;
+  background-color: var(--darkGreen);
+  padding:1rem;
+  font-size: 1.5rem;
+  color:#ffffff;
+}
+
+.numberfond {
+  background-color: #ffffff;
+  padding:1rem;
+  color:#333;
+}
+
+
+.vente-wrapper {
+  position: relative;
+}
+
+
+.modal-title {
+  font-size: 1.4rem;
+}
+
+
+.minimontal-container {
+  position: absolute;
+  top: 131px;
+  left: 316px;
+}
+
+.minimontant {
+  display:flex;
+  align-items: center;
+  background-color: var(--darkGreen);
+  padding:0.5rem 0.8rem;
+  font-size: 1rem;
+  color:#ffffff;
+}
+
+.mininumberfond {
+  background-color: #ffffff;
+  padding:0.2rem 1rem;
+  color:#333;
+}
+
+
+.my-custom-scrollbar {
+  position: relative;
+  height: 200px;
+  overflow: auto;
+}
+.table-wrapper-scroll-y {
+display: block;
+}
+
+.tbaground {
+  background-color: var(--darkGray);
+  color: #ffffff;
+}
+
+.btn-general {
+  background-color: var(--darkGreen);
+  color: #ffffff;
+  padding: 0.5rem 2rem;
+}
+
+
+  
+/*Media queries*/
+
+@media (max-width: 767px) and (min-width: 320px) {
+
+  .sub-btns {
+    display: block;
+  }
+  .btn-popup {
+    margin-bottom: 1rem;
+  }
+
+  .minimontal-container {
+      position: relative;
+      top: 0;
+      left: 0;
+      display: flex;
+      margin-bottom: 1rem;
+  }
+
+}
+
+
+@media (max-width: 960px) and (min-width: 768px) {
+
+  
+}
+
+
+@media (max-width: 1200px) and (min-width: 961px) {
+
 }
