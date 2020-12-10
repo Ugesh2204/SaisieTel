@@ -150,9 +150,38 @@
 }
 
 
+
+.questionairemontal-container {
+  position: absolute;
+  top: 99px;
+  left: 316px;
+}
+
+.questionminimontant {
+  display:flex;
+  align-items: center;
+  background-color: var(--darkGreen);
+  padding:0.5rem 0.8rem;
+  font-size: 1rem;
+  color:#ffffff;
+}
+
+.questionmininumberfond {
+  background-color: #ffffff;
+  padding:0.2rem 1rem;
+  color:#333;
+}
+
+
 .my-custom-scrollbar {
   position: relative;
   height: 200px;
+  overflow: auto;
+}
+
+.my-custom-scrollbarTableArticle {
+  position: relative;
+  height: 400px;
   overflow: auto;
 }
 .table-wrapper-scroll-y {
@@ -170,6 +199,27 @@ display: block;
   padding: 0.5rem 2rem;
 }
 
+.catalogue {
+  color: var(--blue);
+  margin-left:74px;
+}
+
+.prixvente {
+  color: var(--blue);
+  margin-left:79px;
+}
+
+.prixfort {
+  color: var(--blue);
+  margin-left:61px;
+  
+}
+
+.fond {
+  background-color: var(--darkGray);
+  color: #ffffff;
+  padding: 0.5rem 0.6rem;
+}
 
   
 /*Media queries*/
