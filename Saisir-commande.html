@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>AdminLTE 3 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- daterange picker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js">
+  <!-- bootstrap datepicker -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> 
+  <!-- Tempusdominus Bbootstrap 4 -->
+  <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
+  <!-- iCheck -->
+  <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
+  <!-- JQVMap -->
+  <link rel="stylesheet" href="plugins/jqvmap/jqvmap.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/main.css">
+  <!-- overlayScrollbars -->
+  <link rel="stylesheet" href="plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="plugins/daterangepicker/daterangepicker.css">
+  <!-- summernote -->
+  <link rel="stylesheet" href="plugins/summernote/summernote-bs4.css">
+  <!-- Google Font: Source Sans Pro -->
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+</head>
+<body class="hold-transition sidebar-mini layout-fixed">
+<div class="wrapper">
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+    </ul>
+
+    <!-- SEARCH FORM -->
+   
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      <!-- Logedin user -->
+      <li class="nav-item dropdown">
+        <a class="nav-link">
+          <i class="fas fa-user"></i>
+          <span>Jean Pascale </span>
+        </a>
+      </li>
+
+      <li class="nav-item dropdown">
+        <a class="nav-link">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Se déconnecter</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+
+  <!-- Main Sidebar Container -->
+  <aside class="main-sidebar sidebar-dark-primary elevation-4">
+    <!-- Brand Logo -->
+    <a href="index3.html" class="brand-link text-center">
+      <img src="dist/img/LogoReder.png" alt="AdminLTE Logo" class="brand-rederlogo">
+    </a>
+
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <!-- Sidebar Menu -->
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+          
+          <li class="nav-item">
+            <a href="index.html" class="nav-link">
+              <i class="fas fa-shopping-cart"></i>
+              <p>
+                List des commandes
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="Saisir-commande.html" class="nav-link">
+              <i class="fas fa-cart-plus"></i>
+              <p>
+                Saisir une commande
+              </p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <!-- /.sidebar-menu -->
+    </div>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-md-12 text-center">
+            <h1 class="commande-header">Saisir une commande</h1>
+          </div>
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
+            <!-- <div class="row">
+              <div class="col-md-12"> -->
+              <form>
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Code Client</label>
+                        </div>
+                        <div class="col-md-2">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div> 
+                
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Civilité</label>
+                        </div>
+                        <div class="col-md-1">
+                          <input type="text" class="form-control">
+                        </div>
+                        <div class="col-md-4">
+                          <span>(1 = Mme. 2 = Mell. 3 = M )</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+
+               
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Nom</label>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>    
+               
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Prénom</label>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Adresse Compt 1</label>
+                        </div>
+                        <div class="col-sm-11">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Adresse Compt 2</label>
+                        </div>
+                        <div class="col-sm-11">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Numéro Rue</label>
+                        </div>
+                        <div class="col-sm-1">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Nom Rue</label>
+                        </div>
+                        <div class="col-md-11">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Lieu dit</label>
+                        </div>
+                        <div class="col-md-11">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-3">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-4">
+                          <label>Code Postal</label>
+                        </div>
+                        <div class="col-md-6">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-9  text-right">
+                      <div class="form-group ">
+                        <div class="row">
+                          <div class="col-md-2">
+                            <label>Ville</label>
+                          </div>
+                          <div class="col-md-10">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>  
+                      </div>
+                  </div>  
+                </div>
+              
+            
+                <div class="row">
+                  <div class="col-md-12">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-1">
+                          <label>Insee</label>
+                        </div>
+                        <div class="col-sm-1">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <div class="row">
+                        <div class="col-md-2 text-right">
+                          <label>Club</label>
+                        </div>
+                        <div class="col-md-2">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 text-right">
+                      <div class="form-group ">
+                        <div class="row">
+                          <div class="col-md-10">
+                            <label>Support</label>
+                          </div>
+                          <div class="col-md-2">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>  
+                      </div>
+                  </div>  
+                </div>
+              
+            
+                <section class="service">
+                  <h3 class="heading-fond text-center">SERVICES</h3>
+                  <div class="row">
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label>Téléphone 1</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-3">
+                            <label>Téléphone 2</label>
+                          </div>
+                          <div class="col-md-6">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>  
+                    <div class="col-md-4">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-4">
+                            <label>Date de Naissance</label>
+                          </div>
+                          <div class="col-md-8">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div> 
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <div class="row">
+                          <div class="col-md-1">
+                            <label>Couriel</label>
+                          </div>
+                          <div class="col-md-11">
+                            <input type="text" class="form-control">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>  
+
+             
+                    <section id="catalogue">
+                      <!-- <div class="container"> -->
+                        <div class="accordion" id="cata">
+                            <div class="card">
+
+                              <!---->
+                                <div class="card-header" id="faqhead1">
+                                    <a href="#" class="btn btn-header-link headindg-fond text-center collapse" data-toggle="collapse" data-target="#faq1"
+                                    aria-expanded="true" aria-controls="faq1">DEMAND DE CATALOGUE</a>
+                                </div>
+        
+                                <div id="faq1" class="collapse" aria-labelledby="faqhead1" data-parent="#cata">
+                                    <div class="card-body">
+                                      <div class="row">
+                                        <div class="form-check d-flex align-items-center">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Home Moderne</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Femme Moderne</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Fashion</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Sedao</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Sedao</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Pierre Clarence</label>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="form-check">
+                                          <input type="checkbox" class="form-check-input my_checkbox" id="exampleCheck1">
+                                          <label class="form-check-label checklist" for="exampleCheck1">Blan Clarence</label>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
+
+                                <!--Articles-->
+                                <div class="card-header" id="faqhead1">
+                                  <a href="#" class="btn btn-header-link headindg-fond text-center" data-toggle="collapse" data-target="#faq2"
+                                  aria-expanded="true" aria-controls="faq1">ARTICLES</a>
+                                </div>
+                                <div id="faq2" class="collapse show" aria-labelledby="faqhead1" data-parent="#cata">
+                                  <div class="card-body">
+                                    <div class="article-general-wrapper"> 
+                                      <!--Header-->   
+                                      <div class="row article-wrapper">
+                                        <div class="col-md-3">
+                                          <span class="articleth btn-block">Reference</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <span class="articleth btn-block">Taile</span>
+                                        </div>
+                                        <div class="col-md-3">
+                                          <span class="articleth btn-block">Prix catalogue</span>
+                                        </div>
+                                        <div class="col-md-1">
+                                          <span class="articleth btn-block">Qte</span>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <span class="articleth btn-block">Total</span>
+                                        </div>
+                                        <div class="col-md-1">
+                                          <span><i class=" btn fas fa-plus-square articleth btn-block add-btn add_field_button"></i></span>
+                                        </div>
+                                      </div><!-- EndHeader-->
+                                      <div class="input_fields_wrap">
+
+                                      </div>
+                                      <!-- <div class="row article-wrapper ">
+                                        <div class="col-md-3">
+                                          <div class="d-flex mt-1">
+                                            <input type="text" class="form-control mr-1">
+                                            <a class="btn btn-search"><i class="fas fa-search search"></i></a>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                          <div class="d-flex mt-1">
+                                            <input type="text" class="form-control">
+                                            </div>  
+                                        </div>
+                                        <div class="col-md-3">
+                                          <div class="d-flex mt-1">
+                                            <input type="text" class="form-control mr-1">
+                                            <a class="btn btn-search"><i class="fas fa-search search"></i></a>
+                                          </div>
+                                        </div>
+                                        <div class="col-md-1">
+                                          <div class="d-flex mt-1">
+                                            <input type="text" class="form-control">
+                                          </div>  
+                                        </div>
+                                        <div class="col-md-2">
+                                          <div class="d-flex mt-1">
+                                            <input type="text" class="form-control">
+                                          </div> 
+                                        </div>
+                                        <div class="col-md-1">
+                                          <a><i class="btn fas fa-trash-alt btn-delete"></i></a>
+                                        </div>
+                                        <div class="col-md-12">
+                                          <input type="text" class="form-control">
+                                        </div> 
+                                        </div> 
+                                      </div> 
+                                        -->
+                                    </div>  
+                                  </div>
+                                </div>
+                               
+                                <!--Cadeux-->
+                                <div class="card-header" id="faqhead1">
+                                  <a href="#" class="btn btn-header-link headindg-fond text-center" data-toggle="collapse" data-target="#faq2"
+                                  aria-expanded="true" aria-controls="faq1">CADEAUX</a>
+                                </div>
+                                <div id="faq2" class="collapse show" aria-labelledby="faqhead1" data-parent="#cata">
+                                  <div class="card-body">
+                                  </div>
+                                </div>
+
+                            </div>
+                            <!-- <div class="card">
+                                <div class="card-header" id="faqhead2">
+                                    <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq2"
+                                    aria-expanded="true" aria-controls="faq2">S.S.S</a>
+                                </div>
+        
+                                <div id="faq2" class="collapse" aria-labelledby="faqhead2" data-parent="#faq">
+                                    <div class="card-body">
+                                    2
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="card-header" id="faqhead3">
+                                    <a href="#" class="btn btn-header-link collapsed" data-toggle="collapse" data-target="#faq3"
+                                    aria-expanded="true" aria-controls="faq3">S.S.S</a>
+                                </div>
+        
+                                <div id="faq3" class="collapse" aria-labelledby="faqhead3" data-parent="#faq">
+                                    <div class="card-body">
+                                      3
+                                    </div>
+                                </div>
+                            </div> -->
+                        </div>
+                      <!-- </div> -->
+                    </div>
+            
+                
+                </section> 
+
+
+              </form><!--End Form-->
+            <!-- </div>
+            </div> -->
+          
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <strong>REDER - Command par  Téléphone</strong>
+    <div class="float-right d-none d-sm-inline-block">
+      <b>2020</b> 1.0.0
+    </div>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery -->
+<script src="plugins/jquery/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button)
+</script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- ChartJS -->
+<script src="plugins/chart.js/Chart.min.js"></script>
+<!-- Sparkline -->
+<script src="plugins/sparklines/sparkline.js"></script>
+<!-- JQVMap -->
+<script src="plugins/jqvmap/jquery.vmap.min.js"></script>
+<script src="plugins/jqvmap/maps/jquery.vmap.usa.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="plugins/jquery-knob/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="plugins/moment/moment.min.js"></script>
+<script src="plugins/daterangepicker/daterangepicker.js"></script>
+<!-- Tempusdominus Bootstrap 4 -->
+<script src="plugins/tempusdominus-bootstrap-4/js/tempusdominus-bootstrap-4.min.js"></script>
+<!-- Summernote -->
+<script src="plugins/summernote/summernote-bs4.min.js"></script>
+<!-- overlayScrollbars -->
+<script src="plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
+<!-- DataTables -->
+<script src="../../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
+<!-- page script -->
+
+<script>
+  $(document).ready(function() {
+	
+	var wrapper   		= $(".input_fields_wrap"); //Fields wrapper
+	var add_button      = $(".add_field_button"); //Add button ID
+	
+	var x = 0; //initlal text box count
+	$(add_button).click(function(e){ //on add input button click
+		e.preventDefault();
+     x++;
+			$(wrapper).append(
+        '<div class="row article-wrapper">' +
+            '<div class="col-md-3">' +
+              '<div class="d-flex mt-1">' +
+                '<input type="text" class="form-control mr-1">' +
+                '<a class="btn btn-search"><i class="fas fa-search search"></i></a>'+
+              '</div>' +
+            '</div>' +   
+
+            '<div class="col-md-2">' +
+              '<div class="d-flex mt-1">'+
+              '<input type="text" class="form-control">' +
+              '</div>'+
+            '</div>'+  
+
+            '<div class="col-md-3">' +
+              '<div class="d-flex mt-1">'+
+                '<input type="text" class="form-control mr-1">' +
+                '<a class="btn btn-search"><i class="fas fa-search search"></i></a>'+
+              '</div>'+
+            '</div>'+ 
+            
+            '<div class="col-md-1">'+
+              '<div class="d-flex mt-1">'+
+                '<input type="text" class="form-control">'+
+              '</div>'+
+            '</div>'+
+
+            '<div class="col-md-2">'+
+              '<div class="d-flex mt-1">'+
+                '<input type="text" class="form-control">'+
+              '</div>'+
+            '</div>'+
+
+            '<i class=" col-md-1 btn fas fa-trash-alt btn-delete remove_field"></i>' +
+          
+            '<div class="col-md-12">'+
+              '<input type="text" name="mytext[]" class="form-control countfield" value="">'+
+            '</div>'+
+
+          '</div>'
+
+      ); //add input box
+  
+	});
+	
+	$(wrapper).on("click",".remove_field", function(e){ 
+    e.preventDefault();
+    $(this).parent('div').remove(); x--;
+	})
+});
+</script>
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+</body>
+</html>

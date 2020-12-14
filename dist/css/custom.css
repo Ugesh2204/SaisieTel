@@ -221,7 +221,130 @@ display: block;
   padding: 0.5rem 0.6rem;
 }
 
+
+.mylabel {
+   width:200px;
+  text-align: right; 
+}
   
+.g-flex {
+ display: flex;
+}
+
+.heading-fond {
+  background-color: var(--blue);
+  color:#fff;
+  
+}
+
+
+/*Accordion
+} */
+
+#catalogue #cata .card {
+  margin-bottom: 50px;
+  border: 0;
+}
+
+#catalogue #cata .card .card-header {
+  border: 0;
+  -webkit-box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+          box-shadow: 0 0 20px 0 rgba(213, 213, 213, 0.5);
+  border-radius: 2px;
+  padding: 0;
+
+}
+
+#catalogue #cata .card .card-header .btn-header-link {
+  color: #fff;
+  display: block;
+  text-align: left;
+  background-color: var( --blue);
+  color: #fff;
+  font-size:1.5rem;
+
+}
+
+#catalogue #cata .card .card-header .btn-header-link:after {
+  content: "\f107";
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900;
+  float: right;
+}
+
+#catalogue #cata .card .card-header .btn-header-link.collapsed {
+  background-color: var( --blue);
+  color: #fff;
+}
+
+#catalogue #cata .card .card-header .btn-header-link.collapsed:after {
+  content: "\f106";
+}
+
+#catalogue #cata .card .collapsing {
+  background: #FFE472;
+  line-height: 30px;
+}
+
+#catalogue #cata .card .collapse {
+  border: 0;
+}
+
+#catalogue #faq .card .collapse.show {
+  background: #FFE472;
+  line-height: 30px;
+  color: #222;
+}
+
+.checklist {
+  font-size: 1.3rem;
+  margin-left: 1rem;
+}
+
+.my_checkbox {
+  width:20px;
+  height:20px;
+}
+
+.article-wrapper {
+  display: flex;
+  justify-content:space-around;
+  text-align: center;
+}
+
+.articleth {
+    background-color: var(--darkGreen);
+    color: #ffffff;
+    padding: 0.5rem 0rem;
+}
+
+.remove-border {
+  border-right: 0px solid #fff;
+}
+
+
+.add-btn{
+ border-radius: 0;
+ font-size: 1.55rem;
+ padding: 0;
+}
+.add-btn:hover{
+  background-color:var(--darkGray);
+  color:var(--lightOrange);
+ }
+
+.btn-delete {
+ font-size: 1.5rem;
+}
+
+
+.articleinput {
+    /* background-color: var(--darkGreen); */
+    color: #ffffff;
+    /*padding: 0.5rem 1.3rem;*/
+}
+
+/***/
 /*Media queries*/
 
 @media (max-width: 767px) and (min-width: 320px) {
@@ -239,6 +362,19 @@ display: block;
       left: 0;
       display: flex;
       margin-bottom: 1rem;
+  }
+
+  .g-flex {
+    display: block;
+   }
+
+   .mylabel {
+    text-align:left;
+  }
+
+  .mylabel {
+    width:100%;
+    
   }
 
 }
