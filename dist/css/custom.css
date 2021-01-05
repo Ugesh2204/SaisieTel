@@ -13,6 +13,18 @@
   --window: #002b3c;
 }
 
+
+/*Layout */
+
+ /* .inner-content {
+    background-color: #F4516C;
+} */
+/* .content-sidebar {
+  background: #EF8336;
+} */
+
+/*End layout*/
+
 .titleLv2{
   color: var( --fontColor) !important;
 }
@@ -447,8 +459,63 @@ display: block;
   background-color: #ffffff !important;
 }
 
+/*List of users*/
+.searchbar {
+  background-color: #002B3C; 
+  color: white; 
+  padding: 10px 19px 6px;
+}
+ .innersearch {
+  width: 100%; 
+  margin-bottom: 5px;
+ }
 
+.profileborder {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.125), 0 1px 3px rgba(0, 0, 0, 0.2);
+  margin-bottom: 1rem;
+}
+.image-cell {
+  width: 140px;
+}
 
+.profile-image {
+  width: 130px;
+  height: auto;
+}
+
+.highlight
+{
+    background-color: #d9edf7;
+}
+
+.content-sidebar {
+  list-style-type: none;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+
+.content-sidebar li a {
+  padding: 1rem;
+  display: block;
+}
+.content-sidebar li a:hover {
+  background-color: #D9EDF7;
+  padding: 1rem;
+}
+
+.hide-small {
+  display: block;
+}
+
+.faded {
+  opacity: .4;
+}
+
+.unfaded {
+  opacity: 1;
+}
+/*List of users*/
 
 /***/
 /*Media queries*/
@@ -485,6 +552,23 @@ display: block;
 
   .notif-position {
     right: -269px !important ;
+  }
+
+  .image-cell {
+    width: 10px;
+  }
+
+  .profile-image {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+  }
+  .hide-small {
+    display: none;
+  }
+
+  .username {
+    font-size: 1rem;
   }
 
 }

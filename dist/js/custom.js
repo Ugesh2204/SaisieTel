@@ -76,3 +76,17 @@ $('ul.nav-sidebar a').filter(function() {
 // $('ul.nav-treeview a').filter(function() {
 //     return this.href == url;
 // }).parentsUntil(".nav-sidebar > .nav-treeview").addClass('menu-open').prev('a').addClass('active');
+
+
+
+
+//highlight on check
+$("#tbl input").click(function() {
+  if ($(this).is(":checked")) {
+      $(this).parent().parent().addClass("highlight");
+      // $(".content-sidebar .test").addClass("unfaded")
+  } else {
+      $(this).parent().parent().removeClass("highlight");
+      // $(".content-sidebar .test").removeClass("unfaded")
+  }
+});
