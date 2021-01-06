@@ -202,6 +202,12 @@
                 User activity Log
             </a>
           </li>
+          <li class="nav-item">
+            <a href="RoleManagement.html" class="nav-link">
+              <i class="fas fa-user"></i>
+                Manage Role
+            </a>
+          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -216,158 +222,57 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
-            <h3 class="titleLv2">List of Users</h3>
+          <div class="col-md-12 col-sm-12 mx-auto whitebgbox">
+            <h2 class="titleLv2">
+              <a href="ListOfUsers.html">
+                <i class="fas fa-arrow-circle-left"></i>
+                  List of Users
+              </a>
+            </h2>
+            <h3 class="titleLv2">Assign Role</h3>
             <div class="row">
-              <div class=" col-sm-12 col-md-12 col-lg-8 inner-content">
-                <div class="searchbar">
-                  <form>
-                    <div class="row">
-                      <div class="col-md-8">
-                        <input  type="search" placeholder="search" class="form-control innersearch">
-                      </div>
-                    <div class="col-md-4">
-                        <button class="btn btn-primary ">Search</button>
-                    </div>
-                  </form>
-                    
-                  </div>
-                </div>
-                <table class="table people-list profileborder">
-                  <tbody id="tbl">
+              <div class=" col-sm-12 col-md-12 col-lg-12 inner-content">
+                <table class="table table-bordered table-striped ">
+                  <thead class="tableback text-center">
+                  <th>No</th>
+                  <th>User</th>
+                  <th>Role</th>
+                  <th>Actions</th>
+                  </thead>
+                  
+                  <tbody class="text-center">
                     <tr>
-                      <td align="center" valign="middle" class="check-cell">
-                        <input type="checkbox" id="chk-1">
+                      <td>1</td>
+                      <td>Mark</td>
+                      <td ALIGN="center">
+                        <select class="form-control">
+                          <option>Full Access</option>
+                          <option>Admin</option>
+                          <option>Member</option>
+                        </select>
                       </td>
-                      
-                      <td class="image-cell">
-                          <span class="image">
-                              <a href="#">
-                                  <img class="profile-image" src="./dist/img/default_user.png">
-                              </a>
-                          </span>
-                      </td>
-
-                      <td class="info-cell">
-                        <h4 class="username">
-                            <a href="">uroopchand@saimltd.mu</a>
-                            <small class="smaller"><a href=""><i class="fas fa-edit ml-3"></i></a></small>
-                        </h4>
-
-                        <table class="contact-info">
-                            <tbody>
-                              <tr>
-                                  <td><i class="fa fa-users" aria-hidden="true"></i></td>
-                                  <td>
-                                      <span class="group">
-                                          <span>Admin</span><span></span>
-                                      </span>
-                                  </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                      </td>
-
-                      <td class="text-right hide-small">
-                        <div class="last-activity nowrap">
-                            last activity: <strong>9:58 PM</strong>
-                        </div>
+                      <td>
+                        <button class="btn btn-primary">Save</button>
                       </td>
                     </tr>
                     <tr>
-                      <td align="center" valign="middle" class="check-cell">
-                        <input type="checkbox" id="chk-1">
+                      <td>2</td>
+                      <td>Simpson</td>
+                      <td>
+                        <select class="form-control">
+                          <option>Full Access</option>
+                          <option>Admin</option>
+                          <option>Member</option>
+                        </select>
                       </td>
-                      
-                      <td class="image-cell">
-                          <span class="image">
-                              <a href="#">
-                                  <img class="profile-image" src="./dist/img/user3-128x128.jpg">
-                              </a>
-                          </span>
-                      </td>
-
-                      <td class="info-cell">
-                        <h4 class="username">
-                            <a href="">simson@saimltd.mu</a>
-                            <small class="smaller"><a href=""><i class="fas fa-edit ml-3"></i></a></small>
-                        </h4>
-
-                        <table class="contact-info">
-                            <tbody>
-                              <tr>
-                                  <td><i class="fa fa-users" aria-hidden="true"></i></td>
-                                  <td>
-                                      <span class="group">
-                                          <span>Member</span><span></span>
-                                      </span>
-                                  </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                      </td>
-
-                      <td class="text-right hide-small">
-                        <div class="last-activity nowrap">
-                            last activity: <strong>9:58 PM</strong>
-                        </div>
+                      <td>
+                        <button class="btn btn-primary">Save</button>
                       </td>
                     </tr>
-                  </tbody>  
-                </table>    
+                  </tbody>
+                </table>
               </div>
-              <div class=" col col-sm-12 col-md-12 col-lg-4">
-                  <ul class="content-sidebar">
-                      <li>
-                          <a href="Users.html">
-                              <i class="fa fa-plus" aria-hidden="true"></i>
-                              Add Someone
-                          </a>
-                      </li>
-                      <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal">
-                          <i class="far fa-share-square"></i>
-                            &nbsp;
-                            Send Notifications
-                        </a>
-                    </li>
-                    <!--Modal-->
-                    <div class="modal" id="myModal">
-                      <div class="modal-dialog">
-                        <div class="modal-content">
-                    
-                          <!-- Modal Header -->
-                          <div class="modal-header">
-                            <h4 class="modal-title">Message</h4>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          </div>
-                    
-                          <!-- Modal body -->
-                          <div class="modal-body">
-                           <form>
-                            <textarea class="form-control"></textarea>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-                              <button type="submit" class="btn btn-primary">Send</button>
-                            </div>
-                           </form>
-                          </div>
-                        </div>
-                    
-                      </div>
-                      
-                    </div>
-                     <!-- End Modal-->
-
-
-
-                      
-                      <li>
-                          <a href="#"><i class="far fa-trash-alt"></i> &nbsp; Delete</a>
-                      </li>
-                    
-                  </ul>
-              </div>
+             
             </div>
           </div>
         </div>
@@ -377,7 +282,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>REDER - Command par  Téléphone</strong>
+    <strong>SAIM LTD</strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>2020</b> 1.0.0
     </div>
@@ -463,6 +368,16 @@ function myFunction(){
       "ordering": true,
       "info": true,
       "autoWidth": false,
+      "responsive": true,
+    });
+
+    $('#example3').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": true,
       "responsive": true,
     });
   });
