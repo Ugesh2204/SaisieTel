@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>WMA | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Font Awesome -->
@@ -165,29 +165,12 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          
-
-          <li class="nav-item">
-            <a href="Subcommitee.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Sub Committees & Board
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="Meeting.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Meetings
-            </a>
-          </li>
-
           <li class="nav-item">
             <a href="Users.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
-                Add a User
+                Add User
             </a>
           </li>
-
           <li class="nav-item">
             <a href="ListOfUsers.html" class="nav-link">
               <i class="fas fa-list"></i>
@@ -196,17 +179,19 @@
           </li>
 
           <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-shopping-cart"></i>
-                List des commandes
+            <a href="Subcommitee.html" class="nav-link">
+              <i class="far fa-clipboard"></i>
+                Sub Committees
             </a>
           </li>
+
           <li class="nav-item">
-            <a href="Saisir-commande.html" class="nav-link">
-              <i class="fas fa-cart-plus"></i>
-                Saisir une commande
+            <a href="Meeting.html" class="nav-link">
+              <i class="far fa-calendar"></i>
+                Create Meetings
             </a>
           </li>
+
           <li class="nav-item">
             <a href="UserActivitylog.html" class="nav-link">
               <i class="fas fa-user"></i>
@@ -231,81 +216,95 @@
             <h4 class="titleLv2">
               List of Sub Committees and Board
             </h4>
-            <div class="d-flex justify-content-end mb-2">
-              <a href="NewCommittee.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Committee</a>
-            </div>
-    
+          
             <div class=" col-sm-12 col-md-12 col-lg-12 inner-content">
-              <table class="table table-bordered table-striped ">
+              <div class="d-flex justify-content-end mb-2">
+                <a href="NewCommittee.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Committee</a>
+              </div>
+      
+              <table class="table table-bordered table-striped mytable-responsive">
                 <thead class="tableback text-center">
                 <tr><th>No</th>
                 <th>Name</th>
                 <th>Descriptions</th>
+                <th>Members</th>
+                <th>Action</th>
                 </tr></thead>
                 
                 <tbody class="text-center">
                   <tr>
                     <td>1</td>
                     <td>Staff Committees</td>
-                    <td>A description </td>
+                    <td>A description of the committee </td>
+                    <td>
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                      <img src="./dist/img/default_user.png" class="profile-imgsmall"  data-toggle="tooltip" title="Ugesh Roopchand!">
+                    </td>
+                   
+                    <td>
+                      <a href="#" class="btn btn-primary"  data-toggle="tooltip" title="Assign"><i class="fas fa-user-plus"></i></a>
+                      <a href="#" class="btn btn-primary"  data-toggle="tooltip" title="Edit"><i class="far fa-edit"></i></a>
+                      <a href="#" class="btn btn-danger"  data-toggle="tooltip" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
                   </tr>
-                  <tr>
+                  <!-- <tr>
                     <td>2</td>
                     <td>Finance and Project Monitoring Committee</td>
-                    <td>A description </td>
-                  
-                    
+                    <td>A description of the committee </td>
+                    <td>Sub</td>
+                    <td>
+                      <a href="#" class="btn btn-primary" title="Edit"><i class="far fa-edit"></i></a>
+                      <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>3</td>
                     <td>Audit and Risk Committee</td>
-                    <td>A description </td>
+                    <td>A description of the committee </td>
+                    <td>Sub</td>
+                    <td>
+                      <a href="#" class="btn btn-primary" title="Edit"><i class="far fa-edit"></i></a>
+                      <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>4</td>
                     <td>Corporate Governance Committee</td>
-                    <td>A description </td>
+                    <td>A description of the committee </td>
+                    <td>Sub</td>
+                    <td>
+                      <a href="#" class="btn btn-primary" title="Edit"><i class="far fa-edit"></i></a>
+                      <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
                   </tr>
                   <tr>
                     <td>5</td>
                     <td>Board Meeting</td>
-                    <td>A description </td>
-                  </tr>
+                    <td>A description of the board </td>
+                    <td>Board</td>
+                    <td>
+                      <a href="#" class="btn btn-primary" title="Edit"><i class="far fa-edit"></i></a>
+                      <a href="#" class="btn btn-danger" title="Delete"><i class="fas fa-trash-alt"></i></a>
+                    </td>
+                  </tr> -->
                   
                 </tbody>
               </table>
             </div>
-              <!-- <div class="card-body">
-                  <form>
-                      <div class="row">
-                          <div class="col-md-4">
-                              <div class="form-group">
-                                  <label>First Name</label>
-                                  <input type="text" name="first_name" class="form-control">
-                              </div>
-                              <div class="form-group">
-                                  <label>Last Name</label>
-                                  <input type="text" name="last_name" class="form-control">
-                              </div>
-                              <div class="form-group">
-                                <label>Password</label>
-                                <input type="password" name="password" class="form-control">
-                              </div>
-                              <div class="form-group">
-                                  <label>Email Address</label>
-                                  <input type="text" name="email" class="form-control">
-                              </div>
-                          </div>
-                      </div>
-                      <div class="form-group">
-                          <button class="btn btn-primary" type="submit">Create</button>
-
-                          
-                      </div>
-                  </form>
-              </div> -->
-          
-            
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -365,40 +364,14 @@
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
+<script>
+  $(document).ready(function(){
+    $('[data-toggle="tooltip"]').tooltip();   
+  });
+  </script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
 <script src="dist/js/custom.js"></script>
-
-
-<script>
-function myFunction(){
-  var input = document.getElementById("mySelect").value ;
-  var keycode = (event.keyCode ? event.keyCode : event.which);
-  if(input.length >=2 && input.length <=2 && input== 00 && keycode == 13){
-    $("#rechercheClient").modal('show');
-  }
-}
-
-</script>
-
-
-<script>
-  $(function () {
-    $("#example1").DataTable({
-      "responsive": true,
-      "autoWidth": false,
-    });
-    $('#example2').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": false,
-      "responsive": true,
-    });
-  });
-</script>
 </body>
 </html>

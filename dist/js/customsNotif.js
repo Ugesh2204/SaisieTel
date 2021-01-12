@@ -2,18 +2,31 @@
 //     Swal.fire("Our First Alert");
 //   });
    
-//   document.querySelector(".second").addEventListener('click', function(){
-//     Swal.fire("Our First Alert", "With some body text!");
-//   });
-   
-  document.querySelector(".third").addEventListener('click', function(){
+  // document.querySelector(".second").addEventListener('click', function(){
+  //   Swal.fire("Our First Alert", "With some body text!");
+  // });
+
+
+  function CreateUser(){
+    event.preventDefault();
+    Swal.fire({
+            position: 'top-center',
+            icon: 'success',
+            title: 'User Created Successfully',
+            showConfirmButton: false,
+            timer: 2000
+          });
+  }
+
+  function CreateCommittee(){
     event.preventDefault();
     Swal.fire({
         position: 'top-center',
         icon: 'success',
-        title: 'User Created Successfully',
+        title: 'Committee Created Successfully',
         showConfirmButton: false,
-        timer: 2000
+        timer: 50000
       });
-  });
-
+  }
+   
+ 

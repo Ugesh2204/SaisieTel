@@ -169,45 +169,30 @@
           <li class="nav-item">
             <a href="Users.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
-                Add a User
+                Add Member
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="ListOfUsers.html" class="nav-link">
+              <i class="fas fa-list"></i>
+               List of Members
             </a>
           </li>
 
           <li class="nav-item">
             <a href="Subcommitee.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
+              <i class="far fa-clipboard"></i>
                 Sub Committees
             </a>
           </li>
 
           <li class="nav-item">
             <a href="Meeting.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Meetings
+              <i class="far fa-calendar"></i>
+                Create Meetings
             </a>
           </li>
 
-      
-
-          <li class="nav-item">
-            <a href="ListOfUsers.html" class="nav-link">
-              <i class="fas fa-list"></i>
-               List of Users
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-shopping-cart"></i>
-                List des commandes
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Saisir-commande.html" class="nav-link">
-              <i class="fas fa-cart-plus"></i>
-                Saisir une commande
-            </a>
-          </li>
           <li class="nav-item">
             <a href="UserActivitylog.html" class="nav-link">
               <i class="fas fa-user"></i>
@@ -232,7 +217,7 @@
             <h4 class="titleLv2">
               <a href="ListOfUsers.html">
                 <i class="fas fa-arrow-circle-left"></i>
-                  List of Users
+                  List of Members
               </a>
             </h4>
             <h3 class="titleLv2">Add User</h3>
@@ -277,21 +262,21 @@
                                   <div class="radio">
                                       <label>
                                           <input type="radio" name="role" value="admin">
-                                          Member
+                                          Secretary
                                           <div class="explain"> A description of members privileges Example View,Create,Update delete</div>
                                       </label>
                                   </div>
                                   <div class="radio">
                                       <label>
                                           <input type="radio" name="role" value="observer">
-                                          Observer
+                                          Member
                                           <div class="explain">A description of observer privileges Example View,Create,Update delete</div>
                                       </label>
                                   </div>
                               </div>
                           </div>
 
-                          <div class="col-md-4">
+                          <!-- <div class="col-md-4">
                             <div class="form-group">
                                 <label class="AddPeoplelabel">Assign to Sub Committees/Board</label>
                                   <div class="checkbox">
@@ -326,11 +311,11 @@
                                     </label>
                                   </div>
                             </div>
-                        </div>
+                          </div> -->
 
                       </div>
                       <div class="form-group">
-                          <button class="btn btn-primary third" type="submit">Submit</button>
+                          <button class="btn btn-primary" onclick="CreateUser()" type="submit">Submit</button>
                       </div>
                   </form>
               </div>
@@ -423,5 +408,6 @@
     });
   });
 </script>
+
 </body>
 </html>

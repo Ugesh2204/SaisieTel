@@ -169,7 +169,7 @@
 
           <li class="nav-item">
             <a href="Subcommitee.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
+              <i class="fas fa-clipboard-list"></i>
                 Sub Committees & Board
             </a>
           </li>
@@ -231,12 +231,11 @@
             <h4 class="titleLv2">
               Create a New Sub Committee
             </h4>
-            <div class="row">
-              <a href="ListOfUsers.html">
+            <div class="row mb-3">
+              <a href="Subcommitee.html">
                 <i class="fas fa-arrow-circle-left"></i>
                  List of Committees and Board
               </a>
-            
             </div>
         
         
@@ -262,7 +261,7 @@
                       </div>
 
                     <div class="form-group">
-                      <button class="btn btn-primary" type="submit">Create</button>
+                      <button class="btn btn-primary" onclick="CreateCommittee()" type="submit">Create</button>
                       <button class="btn btn-danger" type="submit">Cancel</button>
                     </div>
                      
@@ -270,6 +269,59 @@
                 </div>
                 </div>  
               </div>
+              <div class=" col col-sm-12 col-md-12 col-lg-4">
+                <ul class="content-sidebar">
+                    <li>
+                        <a href="Users.html">
+                          <i class="fas fa-user-plus"></i>
+                            Add Member
+                        </a>
+                    </li>
+                   <div class="user-wrapper">
+                     <div class="row">
+                      <div class="people-list">
+                        <div class="person-card">
+                            <div class="profile-image-inner">
+                                <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                            </div>
+                            <div class="name p-1">Mrs B. Kissoon-Luckpuuttya <span class="mstatus"> - Chairman</span></div>
+                            <a href="#" class="p-1">
+                                <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Dr C.Bokhoree <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Mr L.J.C Ramasawmy <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Mr S. Khuntoo <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                     </div>
+                   </div>
+                  
+                </ul>
+            </div>
             </div>
             
           </div>
@@ -299,6 +351,8 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -327,18 +381,18 @@
 <script src="../../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
 <script src="../../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
 <script src="../../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
-<!-- <script src="http://cloud.tinymce.com/stable/tinymce.min.js?apiKey=[YOUR_API_KEY]"></script> -->
-<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-<script>tinymce.init({selector:'textarea'});</script>
-
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+
+<script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+<script>tinymce.init({selector:'textarea'});</script>
 <!-- page script -->
 <script src="dist/js/custom.js"></script>
+<script src="dist/js/customsNotif.js"></script>
 
 
 

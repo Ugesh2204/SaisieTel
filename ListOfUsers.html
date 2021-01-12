@@ -169,47 +169,33 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          
+          <li class="nav-item">
+            <a href="Users.html" class="nav-link">
+                <i class="fas fa-user-plus"></i>
+                Add Member
+            </a>
+          </li>
+          <li class="nav-item">
+            <a href="ListOfUsers.html" class="nav-link">
+              <i class="fas fa-list"></i>
+               List of Members
+            </a>
+          </li>
+
           <li class="nav-item">
             <a href="Subcommitee.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
+              <i class="far fa-clipboard"></i>
                 Sub Committees
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="Users.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Meetings
+            <a href="Meeting.html" class="nav-link">
+              <i class="far fa-calendar"></i>
+                Create Meetings
             </a>
           </li>
 
-          <li class="nav-item">
-            <a href="Users.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Add a User
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="ListOfUsers.html" class="nav-link">
-              <i class="fas fa-list"></i>
-               List of Users
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="index.html" class="nav-link">
-              <i class="fas fa-shopping-cart"></i>
-                List des commandes
-            </a>
-          </li>
-          <li class="nav-item">
-            <a href="Saisir-commande.html" class="nav-link">
-              <i class="fas fa-cart-plus"></i>
-                Saisir une commande
-            </a>
-          </li>
           <li class="nav-item">
             <a href="UserActivitylog.html" class="nav-link">
               <i class="fas fa-user"></i>
@@ -231,7 +217,7 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
-            <h3 class="titleLv2">List of Users</h3>
+            <h3 class="titleLv2">List of Members</h3>
             <div class="row">
               <div class=" col-sm-12 col-md-12 col-lg-8 inner-content">
                 <div class="searchbar">
@@ -246,102 +232,231 @@
                     </div>
                   </form>
                 </div>
-                <table class="table people-list profileborder">
-                  <tbody id="tbl">
-                    <tr>
-                      <td align="center" valign="middle" class="check-cell">
-                        <input type="checkbox" id="chk-1">
-                      </td>
+                <div id="table-wrapper">
+                  <div id="table-scroll">
+                    <table class="table people-list profileborder mytable-responsive">
                       
-                      <td class="image-cell">
-                          <span class="image">
-                              <a href="#">
-                                  <img class="profile-image" src="./dist/img/default_user.png">
-                              </a>
-                          </span>
-                      </td>
-
-                      <td class="info-cell">
-                        <h4 class="username">
-                            <a href="">uroopchand@saimltd.mu</a>
-                            <small class="smaller"><a href=""><i class="fas fa-edit ml-3"></i></a></small>
-                        </h4>
-
-                        <table class="contact-info">
-                            <tbody>
-                              <tr>
-                                  <td><i class="fa fa-users" aria-hidden="true"></i></td>
-                                  <td>
-                                      <span class="group">
-                                          <span>Admin</span><span></span>
-                                      </span>
-                                  </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                      </td>
-
-                      <td class="text-right hide-small">
-                        <div class="last-activity nowrap">
-                            last activity: <strong>9:58 PM</strong>
-                        </div>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td align="center" valign="middle" class="check-cell">
-                        <input type="checkbox" id="chk-1">
-                      </td>
-                      
-                      <td class="image-cell">
-                          <span class="image">
-                              <a href="#">
-                                  <img class="profile-image" src="./dist/img/user3-128x128.jpg">
-                              </a>
-                          </span>
-                      </td>
-
-                      <td class="info-cell">
-                        <h4 class="username">
-                            <a href="">simson@saimltd.mu</a>
-                            <small class="smaller"><a href=""><i class="fas fa-edit ml-3"></i></a></small>
-                        </h4>
-
-                        <table class="contact-info">
-                            <tbody>
-                              <tr>
-                                  <td><i class="fa fa-users" aria-hidden="true"></i></td>
-                                  <td>
-                                      <span class="group">
-                                          <span>Member</span><span></span>
-                                      </span>
-                                  </td>
-                              </tr>
-                            </tbody>
-                        </table>
-                      </td>
-
-                      <td class="text-right hide-small">
-                        <div class="last-activity nowrap">
-                            last activity: <strong>9:58 PM</strong>
-                        </div>
-                      </td>
-                    </tr>
-                  </tbody>  
-                </table>    
+                      <tbody id="tbl" class="">
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">D. Thacoor</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Admin</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">D. Dassaye</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">H. Urdhin</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">L. Juggoo</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">D. Thacoor</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Admin</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">D. Dassaye</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">H. Urdhin</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td align="center" valign="middle" class="check-cell">
+                              <input type="checkbox" id="chk-1">
+                            </td>
+                            <td class="info-cell col-md-4">
+                              <h4 class="username">
+                                <div class="row">
+                                  <span>Mr<span><span class="ml-2">L. Juggoo</span>
+                                </div>
+                              </h4>
+                            </td>
+                            <td>
+                              <span class="emailsize">Emailexample.gmail.com</span>
+                            </td>
+                            <td>
+                              <div class="d-flex align-items-center">
+                                <i class="fa fa-users p-1" aria-hidden="true"></i>
+                                <span class="group">
+                                  <span>Member</span><span></span>
+                              </span>
+                              </div>
+                            </td>
+                          </tr>
+                      </tbody>  
+                    </table>
+                  </div>
+                </div>  
+                <nav aria-label="...">
+                  <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                      <span class="page-link">Previous</span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item active">
+                      <span class="page-link">
+                        2
+                        <span class="sr-only">(current)</span>
+                      </span>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                      <a class="page-link" href="#">Next</a>
+                    </li>
+                  </ul>
+                </nav>  
               </div>
               <div class=" col col-sm-12 col-md-12 col-lg-4">
                   <ul class="content-sidebar">
                       <li>
                           <a href="Users.html">
                               <i class="fa fa-plus" aria-hidden="true"></i>
-                              Add Someone
+                              Add Member
                           </a>
                       </li>
                       <li>
-                        <a href="#" data-toggle="modal" data-target="#myModal">
-                          <i class="far fa-share-square"></i>
+                        <a href="#">
+                          <i class="far fa-edit"></i>
                             &nbsp;
-                            Send Notifications
+                            Edit
                         </a>
                     </li>
                     <!--Modal-->

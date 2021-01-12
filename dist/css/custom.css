@@ -1,5 +1,5 @@
 :root {
-  --blue: #1F8597;
+  --blue: #0997D1;
   --silverGray: #EFF0F2;
   --white: #ffffff;
   --darkGray: #525A65;
@@ -97,6 +97,11 @@ label {
   margin-bottom: 0;
   font-weight: 400 !important;
   cursor: pointer;
+  font-size:1.2rem;
+}
+
+.explain {
+  font-size:0.9rem;
 }
 
 .labelright{
@@ -536,6 +541,8 @@ display: block;
   background-color: #f5f5f5;
   margin: 0;
   padding: 0;
+  border-top: 10px solid #002b3c;
+  border-bottom: 3px solid #002b3c;
 }
 
 .content-sidebar li a {
@@ -589,6 +596,22 @@ display: block;
   line-height: 0.8rem;
 }
 
+.viewmeeting {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.viewmeeting a {
+  color:#333;
+ 
+}
+.viewmeeting .fa-eye {
+  font-size: 1rem;
+}
+
+/*End List of users*/
+
 /*profile*/
 .person-card {
   display: flex;
@@ -612,6 +635,46 @@ display: block;
 .tox-notifications-container {
   display: none !important;
 }
+
+
+.mytable-responsive {
+  display: inline-table;
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.emailsize {
+  font-size: 1rem;
+}
+
+.content-sidebar a {
+  font-size:1.2rem;
+  font-weight: 500;
+}
+
+/*Add scoll to table*/
+
+#table-wrapper {
+  position:relative;
+}
+#table-scroll {
+  height:312px;
+  overflow:auto;  
+  margin-top:20px;
+}
+#table-wrapper table {
+  width:100%;
+}
+
+.user-wrapper {
+  background-color: #fff;
+  padding: 1.5rem;
+}
+
+
+
+
 
 
 /***/
@@ -672,6 +735,13 @@ display: block;
 
   .username {
     font-size: 1rem;
+  }
+
+  .mytable-responsive {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
 }
