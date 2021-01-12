@@ -16,10 +16,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> 
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-
-  <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script> -->
-
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
@@ -150,7 +146,7 @@
       <li class="nav-item dropdown">
         <a class="nav-link">
           <i class="fas fa-sign-out-alt"></i>
-          <span>Se déconnecter</span>
+          <span>Log out</span>
         </a>
       </li>
     </ul>
@@ -169,21 +165,6 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          
-          <li class="nav-item">
-            <a href="Users.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Sub Committees
-            </a>
-          </li>
-
-          <li class="nav-item">
-            <a href="Users.html" class="nav-link">
-                <i class="fas fa-user-plus"></i>
-                Meetings
-            </a>
-          </li>
-
           <li class="nav-item">
             <a href="Users.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
@@ -192,9 +173,25 @@
           </li>
 
           <li class="nav-item">
+            <a href="Subcommitee.html" class="nav-link">
+                <i class="fas fa-user-plus"></i>
+                Sub Committees Group
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Meeting.html" class="nav-link">
+              <i class="far fa-calendar-alt"></i>
+                Create Meetings
+            </a>
+          </li>
+
+      
+
+          <li class="nav-item">
             <a href="ListOfUsers.html" class="nav-link">
               <i class="fas fa-list"></i>
-               List of Users
+               List of Members
             </a>
           </li>
 
@@ -216,12 +213,6 @@
                 User activity Log
             </a>
           </li>
-          <li class="nav-item">
-            <a href="RoleManagement.html" class="nav-link">
-              <i class="fas fa-user"></i>
-                Manage Role
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -236,58 +227,152 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 col-sm-12 mx-auto whitebgbox">
-            <h2 class="titleLv2">
-              <a href="ListOfUsers.html">
-                <i class="fas fa-arrow-circle-left"></i>
-                  List of Users
-              </a>
-            </h2>
-            <h3 class="titleLv2">Assign Role</h3>
-            <div class="row">
-              <div class=" col-sm-12 col-md-12 col-lg-12 inner-content">
-                <table class="table table-bordered table-striped ">
-                  <thead class="tableback text-center">
-                  <th>No</th>
-                  <th>User</th>
-                  <th>Role</th>
-                  <th>Actions</th>
-                  </thead>
-                  
-                  <tbody class="text-center">
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td ALIGN="center">
-                        <select class="form-control">
-                          <option>Full Access</option>
-                          <option>Admin</option>
-                          <option>Member</option>
+          <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
+            
+            <h3 class="titleLv2"> New Meeting</h3>
+            
+          <div class="row">
+            <div class=" col-sm-12 col-md-12 col-lg-8 inner-content">
+              <div class="card">
+                <div class="card-body">
+                  <form>
+                    <div class="form-group">
+                      <label class="mb-1">Meeting Number</label>
+                      <input type="text" class="form-control col-md-2" value="248">
+
+                    </div>
+                    <div class="form-group">
+                        <label class="mb-1">Sub-committees & Board Meeting</label>
+                        <select class="typefocommittees form-control">
+                          <option>Select a meeting</option>
+                          <option>Staff Committees</option>
+                          <option>Finance and Project Monitoring Committee</option>
+                          <option>Audit and Risk Committee</option>
+                          <option>Corporate Governance Committee</option>
+                          <option>Corporate Governance Committee</option>
+                          <option>Board Meeting</option>
                         </select>
-                      </td>
-                      <td>
-                        <button class="btn btn-primary">Save</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Simpson</td>
-                      <td>
-                        <select class="form-control">
-                          <option>Full Access</option>
-                          <option>Admin</option>
-                          <option>Member</option>
-                        </select>
-                      </td>
-                      <td>
-                        <button class="btn btn-primary">Save</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-             
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1">Meeting Title</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <label class="mb-1">Location</label>
+                      <input type="text" class="form-control">
+                    </div>
+                    <div class="form-group ">
+                        <label class="m-0">Date:</label>
+                        <input type="date" class="form-control datetimepicker-input">
+                        
+                        <label class="m-0">From:</label>
+                        <input class=" form-control" type="time" name="from"> 
+                      
+                        <label class="m-0">To:</label>
+                        <input class=" form-control" type="time" name="to">
+                    </div>
+                </div>
+              </div>  
+
+              <!-- Add People to meeting and load existing People according to committees-->
+              <h4>Members</h4>
+              <div class="card">
+                <div class="card-body">
+                  <div class="d-flex justify-content-end mb-2">
+                    <a href="NewMeeting.html" class="btn btn-primary"><i class="fas fa-user-plus"></i> Add Member</a>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="people-list">
+                        <div class="person-card">
+                            <div class="profile-image-inner">
+                                <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                            </div>
+                            <div class="name p-1">Mrs B. Kissoon-Luckpuuttya <span class="mstatus"> - Chairman</span></div>
+                            <a href="#" class="p-1">
+                                <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Dr C.Bokhoree <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Mr L.J.C Ramasawmy <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                        <div class="person-card">
+                          <div class="profile-image-inner">
+                              <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                          </div>
+                          <div class="name p-1">Mr S. Khuntoo <span class="mstatus"> - Member</span></div>
+                          <a href="#" class="p-1">
+                              <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="person-card">
+                        <div class="profile-image-inner">
+                            <img class="profile-imgsmall" src="/dist/img/default_user.png">
+                        </div>
+                        <div class="name p-1">Mr N. Jowaheer <span class="mstatus"> - officer in charge</span></div>
+                        <a href="#" class="p-1">
+                            <i class="fa fa-times delicon" style="font-size: 1.18em" aria-hidden="true"></i>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>  
+                    
+
+             </form>
             </div>
+
+            <!-- <div class=" col col-sm-12 col-md-12 col-lg-4">
+              <ul class="content-sidebar">
+                  <li>
+                      <a href="Users.html">
+                          <i class="fa fa-plus" aria-hidden="true"></i>
+                          Add Someone
+                      </a>
+                  </li>
+                  <li>
+                    <a href="#" data-toggle="modal" data-target="#myModal">
+                      <i class="far fa-share-square"></i>
+                        &nbsp;
+                        Send Notifications
+                    </a>
+                </li>
+               
+
+
+
+                  
+                  <li>
+                      <a href="#"><i class="far fa-trash-alt"></i> &nbsp; Delete</a>
+                  </li>
+                
+              </ul>
+            </div> -->
+          </div>
+
+          
+            
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -295,12 +380,12 @@
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-  <footer class="main-footer">
-    <strong>SAIM LTD</strong>
+  <!-- <footer class="main-footer">
+    <strong>REDER - Command par  Téléphone</strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>2020</b> 1.0.0
     </div>
-  </footer>
+  </footer> -->
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
@@ -314,8 +399,9 @@
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script> 
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
-<script>
+<script> 
   $.widget.bridge('uibutton', $.ui.button)
 </script>
 <!-- Bootstrap 4 -->
@@ -347,26 +433,13 @@
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
-
-<!-- javascript -->
-
-
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
 <script src="dist/js/custom.js"></script>
 
 
-<script>
-function myFunction(){
-  var input = document.getElementById("mySelect").value ;
-  var keycode = (event.keyCode ? event.keyCode : event.which);
-  if(input.length >=2 && input.length <=2 && input== 00 && keycode == 13){
-    $("#rechercheClient").modal('show');
-  }
-}
 
-</script>
 
 
 <script>
@@ -382,16 +455,6 @@ function myFunction(){
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-    });
-
-    $('#example3').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
       "responsive": true,
     });
   });

@@ -16,10 +16,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"> 
   <!-- Tempusdominus Bbootstrap 4 -->
   <link rel="stylesheet" href="plugins/tempusdominus-bootstrap-4/css/tempusdominus-bootstrap-4.min.css">
-
-  <!-- <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
-  <script>tinymce.init({selector:'textarea'});</script> -->
-
   <!-- iCheck -->
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- JQVMap -->
@@ -170,15 +166,16 @@
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
           
+
           <li class="nav-item">
-            <a href="Users.html" class="nav-link">
+            <a href="Subcommitee.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
-                Sub Committees
+                Sub Committees & Board
             </a>
           </li>
 
           <li class="nav-item">
-            <a href="Users.html" class="nav-link">
+            <a href="Meeting.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
                 Meetings
             </a>
@@ -216,12 +213,6 @@
                 User activity Log
             </a>
           </li>
-          <li class="nav-item">
-            <a href="RoleManagement.html" class="nav-link">
-              <i class="fas fa-user"></i>
-                Manage Role
-            </a>
-          </li>
         </ul>
       </nav>
       <!-- /.sidebar-menu -->
@@ -236,58 +227,85 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-12 col-sm-12 mx-auto whitebgbox">
-            <h2 class="titleLv2">
-              <a href="ListOfUsers.html">
-                <i class="fas fa-arrow-circle-left"></i>
-                  List of Users
-              </a>
-            </h2>
-            <h3 class="titleLv2">Assign Role</h3>
-            <div class="row">
-              <div class=" col-sm-12 col-md-12 col-lg-12 inner-content">
-                <table class="table table-bordered table-striped ">
-                  <thead class="tableback text-center">
-                  <th>No</th>
-                  <th>User</th>
-                  <th>Role</th>
-                  <th>Actions</th>
-                  </thead>
-                  
-                  <tbody class="text-center">
-                    <tr>
-                      <td>1</td>
-                      <td>Mark</td>
-                      <td ALIGN="center">
-                        <select class="form-control">
-                          <option>Full Access</option>
-                          <option>Admin</option>
-                          <option>Member</option>
-                        </select>
-                      </td>
-                      <td>
-                        <button class="btn btn-primary">Save</button>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>2</td>
-                      <td>Simpson</td>
-                      <td>
-                        <select class="form-control">
-                          <option>Full Access</option>
-                          <option>Admin</option>
-                          <option>Member</option>
-                        </select>
-                      </td>
-                      <td>
-                        <button class="btn btn-primary">Save</button>
-                      </td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-             
+          <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
+            <h4 class="titleLv2">
+              List of Sub Committees and Board
+            </h4>
+            <div class="d-flex justify-content-end mb-2">
+              <a href="NewCommittee.html" class="btn btn-primary"><i class="fas fa-plus"></i> Create New Committee</a>
             </div>
+    
+            <div class=" col-sm-12 col-md-12 col-lg-12 inner-content">
+              <table class="table table-bordered table-striped ">
+                <thead class="tableback text-center">
+                <tr><th>No</th>
+                <th>Name</th>
+                <th>Descriptions</th>
+                </tr></thead>
+                
+                <tbody class="text-center">
+                  <tr>
+                    <td>1</td>
+                    <td>Staff Committees</td>
+                    <td>A description </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>Finance and Project Monitoring Committee</td>
+                    <td>A description </td>
+                  
+                    
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>Audit and Risk Committee</td>
+                    <td>A description </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>Corporate Governance Committee</td>
+                    <td>A description </td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>Board Meeting</td>
+                    <td>A description </td>
+                  </tr>
+                  
+                </tbody>
+              </table>
+            </div>
+              <!-- <div class="card-body">
+                  <form>
+                      <div class="row">
+                          <div class="col-md-4">
+                              <div class="form-group">
+                                  <label>First Name</label>
+                                  <input type="text" name="first_name" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                  <label>Last Name</label>
+                                  <input type="text" name="last_name" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                <label>Password</label>
+                                <input type="password" name="password" class="form-control">
+                              </div>
+                              <div class="form-group">
+                                  <label>Email Address</label>
+                                  <input type="text" name="email" class="form-control">
+                              </div>
+                          </div>
+                      </div>
+                      <div class="form-group">
+                          <button class="btn btn-primary" type="submit">Create</button>
+
+                          
+                      </div>
+                  </form>
+              </div> -->
+          
+            
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -296,7 +314,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>SAIM LTD</strong>
+    <strong>REDER - Command par  Téléphone</strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>2020</b> 1.0.0
     </div>
@@ -347,10 +365,6 @@
 <script src="dist/js/adminlte.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="dist/js/pages/dashboard.js"></script>
-
-<!-- javascript -->
-
-
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
@@ -382,16 +396,6 @@ function myFunction(){
       "ordering": true,
       "info": true,
       "autoWidth": false,
-      "responsive": true,
-    });
-
-    $('#example3').DataTable({
-      "paging": true,
-      "lengthChange": false,
-      "searching": false,
-      "ordering": true,
-      "info": true,
-      "autoWidth": true,
       "responsive": true,
     });
   });

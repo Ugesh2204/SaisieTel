@@ -9,6 +9,7 @@
 		e.preventDefault();
      x++;
 			$(wrapper).append(
+        
         '<div class="row article-wrapper">' +
             '<div class="col-md-3">' +
               '<div class="d-flex mt-1">' +
@@ -90,3 +91,4 @@ $("#tbl input").click(function() {
       // $(".content-sidebar .test").removeClass("unfaded")
   }
 });
+

@@ -6,6 +6,7 @@
   <title>AdminLTE 3 | Dashboard</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.min.css'>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -139,14 +140,14 @@
       <li class="nav-item dropdown">
         <a class="nav-link">
           <i class="fas fa-user"></i>
-          <span>Jean Pascale </span>
+          <span class="topName">Ugesh Roopchand </span>
         </a>
       </li>
 
       <li class="nav-item dropdown">
         <a class="nav-link">
           <i class="fas fa-sign-out-alt"></i>
-          <span>Se déconnecter</span>
+          <span class="topName">Log Out</span>
         </a>
       </li>
     </ul>
@@ -157,7 +158,7 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link text-center">
-      <img src="dist/img/LogoReder.png" alt="AdminLTE Logo" class="brand-rederlogo">
+      <img src="dist/img/wma.jpg" alt="AdminLTE Logo" class="brand-rederlogo">
     </a>
 
     <!-- Sidebar -->
@@ -165,13 +166,28 @@
       <!-- Sidebar Menu -->
       <nav class="mt-2">
         <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          
           <li class="nav-item">
             <a href="Users.html" class="nav-link">
                 <i class="fas fa-user-plus"></i>
                 Add a User
             </a>
           </li>
+
+          <li class="nav-item">
+            <a href="Subcommitee.html" class="nav-link">
+                <i class="fas fa-user-plus"></i>
+                Sub Committees
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a href="Meeting.html" class="nav-link">
+                <i class="fas fa-user-plus"></i>
+                Meetings
+            </a>
+          </li>
+
+      
 
           <li class="nav-item">
             <a href="ListOfUsers.html" class="nav-link">
@@ -212,7 +228,7 @@
     <section class="content">
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-11 col-sm-12 mx-auto whitebgbox">
+          <div class="col-md-11 col-sm-12 mx-auto whitebgbox mt-5">
             <h4 class="titleLv2">
               <a href="ListOfUsers.html">
                 <i class="fas fa-arrow-circle-left"></i>
@@ -225,6 +241,10 @@
                   <form>
                       <div class="row">
                           <div class="col-md-4">
+                            <div class="form-group">
+                              <label>Title</label>
+                              <input type="text" name="title" class="form-control">
+                          </div>
                               <div class="form-group">
                                   <label>First Name</label>
                                   <input type="text" name="first_name" class="form-control">
@@ -272,35 +292,48 @@
                           </div>
 
                           <div class="col-md-4">
-                              <div class="form-group">
-                                  <label class="AddPeoplelabel">Assign to a Group</label>
-                                    <div class="checkbox">
-                                      <label>
-                                          <input type="checkbox" class="group-option">
-                                          Group 1
-                                      </label>
-                                    </div>
-                                    <div class="checkbox">
-                                      <label>
-                                          <input type="checkbox" class="group-option">
-                                          Group 2
-                                      </label>
-                                    </div>
-                              </div>
-                          </div>
+                            <div class="form-group">
+                                <label class="AddPeoplelabel">Assign to Sub Committees/Board</label>
+                                  <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="group-option">
+                                        Staff Committees
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="group-option">
+                                        Finance and Project Monitoring Committee
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="group-option">
+                                        Audit and Risk Committee
+                                    </label>
+                                  </div>
+
+                                  <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="group-option">
+                                        Corporate Governance Committee
+                                    </label>
+                                  </div>
+                                  <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" class="group-option">
+                                        Board Meeting
+                                    </label>
+                                  </div>
+                            </div>
+                        </div>
 
                       </div>
                       <div class="form-group">
-                          <button class="btn btn-primary" type="submit">Submit</button>
-
-                          
+                          <button class="btn btn-primary third" type="submit">Submit</button>
                       </div>
                   </form>
               </div>
-
-
-             
-
           </div>
             
           </div>
@@ -311,7 +344,7 @@
   </div>
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>REDER - Command par  Téléphone</strong>
+    <strong>Wastewater Management Authority</strong>
     <div class="float-right d-none d-sm-inline-block">
       <b>2020</b> 1.0.0
     </div>
@@ -330,6 +363,8 @@
 <!-- jQuery UI 1.11.4 -->
 <script src="plugins/jquery-ui/jquery-ui.min.js"></script>
 <!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10.10.1/dist/sweetalert2.all.min.js"></script>
 <script>
   $.widget.bridge('uibutton', $.ui.button)
 </script>
@@ -366,18 +401,9 @@
 <script src="dist/js/demo.js"></script>
 <!-- page script -->
 <script src="dist/js/custom.js"></script>
+<script src="dist/js/customsNotif.js"></script>
 
 
-<script>
-function myFunction(){
-  var input = document.getElementById("mySelect").value ;
-  var keycode = (event.keyCode ? event.keyCode : event.which);
-  if(input.length >=2 && input.length <=2 && input== 00 && keycode == 13){
-    $("#rechercheClient").modal('show');
-  }
-}
-
-</script>
 
 
 <script>

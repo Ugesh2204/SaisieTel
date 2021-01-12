@@ -11,11 +11,51 @@
   --lightRed: #F4516C;
   --fontColor: #072b3e;
   --window: #002b3c;
+  --wmacolor:#0997D1;
 }
 
 
 
+a {
+  color:var(--wmacolor);
+  text-decoration: none;
+  background-color: transparent;
+}
 
+.btn-primary {
+  color: #ffffff;
+  background-color: var(--wmacolor);
+  border-color:var(--wmacolor);
+  box-shadow: none;
+}
+
+.topName {
+  font-size: 1rem;
+}
+
+
+[class*='sidebar-dark-'] {
+  background-color: #fff;
+}
+
+[class*='sidebar-dark-'] .sidebar a {
+  color: var(--window);
+}
+
+.nav-pills .nav-link:not(.active):hover {
+  color: var(--wmacolor) !important;
+}
+
+
+footer {
+  background-color: var(--window) !important;
+}
+
+
+/* .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
+  background-color: blue;
+  color: #ffffff;
+} */
 
 /*Layout */
 
@@ -64,7 +104,7 @@ label {
 }
 
 .nav-link.active {
-  background-color: var(--blue) !important;
+  background-color: var(--window) !important;
   color: #ffffff;
 }
 
@@ -524,10 +564,65 @@ display: block;
   color:#fff;
 }
 
+.date-card {
+  /*border:1px solid #000;*/
+  background-color: var(--wmacolor);
+  color:#fff;
+  width:100px;
+  height:100px;
+  padding: 0.2rem;
+}
+
+.meetingtitle {
+  font-weight: 600;
+  color: var(--window);
+}
+.subtitlem {
+  font-weight: 600;
+}
+.datesize {
+  font-size: 2rem;
+  font: weight 400;
+}
+
+.innerdatecard {
+  line-height: 0.8rem;
+}
+
+/*profile*/
+.person-card {
+  display: flex;
+}
+.profile-imgsmall {
+    width: 20px;
+    height: 20px;
+    min-width: 20px;
+    border-radius: 4px;
+    margin-right: 3px;
+}
+
+.mstatus {
+  color:var(--wmacolor);
+  font-weight: 600;
+}
+.delicon{
+  color:var(--lightRed);
+}
+
+.tox-notifications-container {
+  display: none !important;
+}
+
 
 /***/
 /*Media queries*/
 @media (max-width: 767px) and (min-width: 375px) {
+
+  .topName {
+    font-size: 0.9rem;
+    word-wrap:normal;
+  }
+
   .sub-btns {
     display: block;
   }
