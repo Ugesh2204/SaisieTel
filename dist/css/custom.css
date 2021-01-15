@@ -15,6 +15,10 @@
 }
 
 
+.form-control {
+  height: calc(2rem + 2px) !important;
+}
+
 
 a {
   color:var(--wmacolor);
@@ -33,6 +37,18 @@ a {
   font-size: 1rem;
 }
 
+select {
+    width:100px; 
+    overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+}
+
+
+.modal-body {
+    max-height: calc(100vh - 200px);
+    overflow-y: auto;
+}
 
 [class*='sidebar-dark-'] {
   background-color: #fff;
@@ -51,22 +67,6 @@ footer {
   background-color: var(--window) !important;
 }
 
-
-/* .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active, .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active {
-  background-color: blue;
-  color: #ffffff;
-} */
-
-/*Layout */
-
- /* .inner-content {
-    background-color: #F4516C;
-} */
-/* .content-sidebar {
-  background: #EF8336;
-} */
-
-/*End layout*/
 
 .titleLv2{
   color: var( --fontColor) !important;
@@ -571,6 +571,10 @@ display: block;
   color:#fff;
 }
 
+.meetinglist {
+  display: flex;
+}
+
 .date-card {
   /*border:1px solid #000;*/
   background-color: var(--wmacolor);
@@ -604,10 +608,18 @@ display: block;
 
 .viewmeeting a {
   color:#333;
- 
+  font-family: 'Source Sans Pro';
+  cursor: pointer;
 }
+
 .viewmeeting .fa-eye {
-  font-size: 1rem;
+  font-size: 1.2rem;
+  color:var(--wmacolor);
+  cursor: pointer;
+}
+.viewtext {
+  font-size: 0.9rem;
+  margin-left:0.5rem;
 }
 
 /*End List of users*/
@@ -616,6 +628,17 @@ display: block;
 .person-card {
   display: flex;
 }
+
+
+.person-cardModal {
+  display: flex;
+}
+
+.membername {
+  width:100%;
+}
+
+
 .profile-imgsmall {
     width: 20px;
     height: 20px;
@@ -672,8 +695,38 @@ display: block;
   padding: 1.5rem;
 }
 
+.user-container {
+  height: 250px;
+  width:100%; 
+}
+.userinner-content {
+  height:259px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
 
 
+.templatenav {
+ width:100%;
+ margin-left:-50px;
+}
+.templatenav li {
+  display: block;
+  
+ }
+
+
+/*Form Template Board**/
+ .formTemplate {
+   display: flex;
+   align-items: center;
+ }
+
+ .smallth {
+   font-size: 0.9rem;
+   margin-left: 0.5rem;
+   margin-top:-18px;
+ }
 
 
 
