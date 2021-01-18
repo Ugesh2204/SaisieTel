@@ -1,0 +1,37 @@
+.nav-link-btn {
+    background-color: #0795D0 !important;
+    border-radius:0px !important;
+   
+} 
+
+
+.nav-padding {
+    padding: 0rem 1rem !important;
+}
+
+
+
+.flat-btn a {
+    display: block !important;
+    background-color: #002b3c !important;
+    padding: 1rem 1rem;
+    border-radius:0px !important;
+    color: #fff !important;
+}
+
+.flat-btn a:hover {
+    background-color: #0795D0 !important;
+    color: #fff !important;
+}    
+
+/* .flat-btn a:hover {
+    background-color: #0795D0 !important;
+    padding: 1.2rem 1.2rem !important;
+    display: block;
+}
+
+.flat-btn p:hover {
+    display: block;
+    color:#fff !important;
+    
+} */ 

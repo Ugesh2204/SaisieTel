@@ -108,10 +108,10 @@ label {
  text-align: right;
 }
 
-.nav-link.active {
+/* .nav-link.active {
   background-color: var(--window) !important;
   color: #ffffff;
-}
+} */
 
 .whitebgbox {
   background-color: var( --white);
