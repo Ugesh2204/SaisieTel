@@ -13,7 +13,13 @@
   
 
 .login-body {
-    background-color: var(--blue);
+    /* background-image: url(../img/loginbackground.jpg); */
+    background: rgb(0,212,255);
+    background: radial-gradient(circle, rgba(0,212,255,1) 0%, rgba(0,163,198,1) 16%, rgba(0,85,108,1) 49%, rgba(0,43,60,1) 79%);
+}
+
+.logo-reder h1 {
+    color:#fff;
 }
 
 .user_card {
@@ -35,7 +41,7 @@
 }
 
 .form-heading-text {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color:#333;
 }
 

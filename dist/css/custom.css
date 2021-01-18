@@ -14,7 +14,6 @@
   --wmacolor:#0997D1;
 }
 
-
 .form-control {
   height: calc(2rem + 2px) !important;
 }
@@ -59,7 +58,7 @@ select {
 }
 
 .nav-pills .nav-link:not(.active):hover {
-  color: var(--wmacolor) !important;
+  color: #fff !important;
 }
 
 
@@ -108,10 +107,10 @@ label {
  text-align: right;
 }
 
-/* .nav-link.active {
-  background-color: var(--window) !important;
+.nav-link.active {
+  background-color: var(--wmacolor) !important;
   color: #ffffff;
-} */
+}
 
 .whitebgbox {
   background-color: var( --white);
